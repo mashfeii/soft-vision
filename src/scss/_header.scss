@@ -1,0 +1,84 @@
+//=================================================================================================
+.header {
+  position: absolute;
+  z-index: 30;
+  width: 100%;
+  top: 0;
+  left: 0;
+  &__wrapper {
+    position: fixed;
+    @extend %fl-a-ct;
+    z-index: 29;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: rem(5) 0;
+    min-height: var(--header-height);
+    transition: all 0.32s ease-in-out;
+    border-bottom: 2px solid transparent;
+    ._header-scroll & {
+      transform: translateY(-100%);
+      min-height: calc(var(--header-height) - 2rem);
+      background-color: rgba(220, 220, 220, 0.4);
+      border-color: rgba(220, 220, 220, 0.8);
+    }
+    .header.header--light._header-scroll & {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    ._header-scroll._header-show & {
+      transform: translateY(0);
+    }
+  }
+
+  &__container {
+    width: 100%;
+    padding: 0 4rem;
+    @extend %fl-r-ctb;
+    gap: 6rem;
+  }
+
+  &__contacts {
+    @extend %fl-r-ct;
+    gap: 0.9rem;
+  }
+
+  &__phone {
+    display: inline-block;
+    @extend %hover;
+
+    &:not(:last-child) {
+      margin-right: 0.4rem;
+    }
+  }
+
+  &__social {
+    flex: 0 0 1.8rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    transition: transform 0.32s ease;
+
+    @media (any-hover: hover) {
+      &:hover {
+        transform: translateY(-3px) scale(1.2);
+      }
+    }
+
+    picture,
+    img {
+      max-width: 100%;
+      object-fit: contain;
+    }
+    svg {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+  }
+
+  &__button {
+    &:not(:first-child) {
+      margin-left: 1.5rem;
+    }
+  }
+}
+
+//====================================================================================================

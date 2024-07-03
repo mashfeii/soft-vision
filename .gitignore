@@ -1,0 +1,12 @@
+phpmailer/
+package-lock.json
+node_modules/
+dist/
+Source/
+version.json
+undefined
+**/*.zip
+**/*.rar
+src/fonts/*
+**/*.php
+!src/fonts/*.ttf

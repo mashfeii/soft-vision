@@ -1,0 +1,21 @@
+//* Настройки стилей для повторяющихся начертаний
+%f-16-500 {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: math.div(19, 16);
+  letter-spacing: -0.02em;
+}
+.f-16-500 {
+  @extend %f-16-500;
+}
+%f-18-500 {
+  font-weight: 500;
+  @include adaptiveValue("font-size", 18, 16);
+  line-height: math.div(22, 18);
+  letter-spacing: -0.02em;
+}
+.f-18-500 {
+  @extend %f-18-500;
+}
+%f-24-500 {
+}
