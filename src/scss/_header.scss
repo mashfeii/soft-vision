@@ -37,6 +37,10 @@
     gap: 6rem;
   }
 
+  &__logo {
+    margin-right: 5rem;
+  }
+
   &__contacts {
     @extend %fl-r-ct;
     gap: 0.9rem;

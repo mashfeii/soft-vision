@@ -3,17 +3,20 @@
     max-width: 63rem;
   }
   &__container {
+  }
+
+  &__title {
     &:not(:last-child) {
-      margin-bottom: 3.6rem;
+      margin-bottom: em(4, 90);
     }
   }
 
   &__slider {
-    /* max-width: 148rem; */
-    /* margin: 0 auto; */
-    .slick-track {
+    .slick-list {
+      z-index: 2;
       overflow: visible !important;
-      padding: 2rem 0;
+      padding-top: 3.6rem;
+      padding-bottom: 2rem;
     }
     @extend %ml;
     padding-left: 2rem;
@@ -29,10 +32,11 @@
     padding: 4.2rem 4.5rem;
     transition: all 0.32s ease-in-out;
 
-    &:nth-child(even) {
+    &:nth-child(3n + 1),
+    &:nth-child(3n + 3) {
       width: 42rem;
     }
-    &:nth-child(odd) {
+    &:nth-child(3n + 2) {
       width: 61rem;
     }
 
@@ -40,12 +44,35 @@
       margin-right: 1.5rem;
     }
 
-
     @media (any-hover: hover) {
       &:hover {
         transform: translateY(-0.5rem);
         box-shadow: 0 0 1rem 0.3rem rgba(16, 238, 14, 0.6);
       }
+    }
+  }
+
+  &__slide--flying {
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      @extend %bg-con;
+    }
+    &::before {
+      top: -4.8rem;
+      left: 0.8rem;
+      width: 43rem;
+      height: 45rem;
+      background-image: url("@img/expectations/suitcase-01.png");
+    }
+    &::after {
+      top: -25%;
+      left: 30%;
+      width: 42rem;
+      height: 42rem;
+      background-image: url("@img/expectations/suitcase-02.png");
     }
   }
 

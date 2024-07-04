@@ -14,7 +14,7 @@ $maxWidth: 1920;
 $maxWidthContainer: 1480;
 // Общий отступ у контейнера
 // (30 = по 15px слева и справа, 0 = нет отступа)
-$containerPadding: 30;
+$containerPadding: 40;
 
 // Ширина срабатывания первого брейкпоинта
 $containerWidth: $maxWidthContainer + $containerPadding;
@@ -59,8 +59,17 @@ body {
 .page {
   padding-top: var(--header-height);
 
-  section:not(:last-child) {
-    margin-bottom: 17.2rem;
+  section:not(:first-child) {
+    margin-top: 17.2rem;
+  }
+  section.counters:not(:first-child) {
+    margin-top: 16rem;
+  }
+  section.cover + section.cover,
+  section.cover-dark + section.cover,
+  section.cover + section.cover-dark,
+  section.cover-dark + section.cover-dark {
+    margin-top: 0;
   }
 }
 
@@ -125,3 +134,4 @@ body {
 @import "blocks/actual";
 @import "blocks/fields";
 @import "blocks/expectations";
+@import "blocks/counters";

@@ -1,5 +1,6 @@
 .hero {
   position: relative;
+  padding-top: 7.52rem;
 
   &::before {
     content: "";
@@ -13,7 +14,6 @@
     background-image: url("@img/hero/back.png");
   }
 
-  padding-top: 7.7rem;
   &__container {
     @extend %fl-a-ct;
     flex-direction: column;
@@ -61,6 +61,7 @@
   &__button {
     padding: 2.1rem 3.2rem 2.7rem;
     border-radius: 1rem;
+    @extend %f-18-500;
 
     &:not(:last-child) {
       margin-bottom: rem(145);

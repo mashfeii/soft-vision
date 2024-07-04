@@ -26,7 +26,7 @@
 }
 %f-21 {
   @include adaptiveValue("font-size", 21, 18);
-  line-height: 150%;
+  line-height: 1.5;
   letter-spacing: -0.02em;
 }
 .f-21 {

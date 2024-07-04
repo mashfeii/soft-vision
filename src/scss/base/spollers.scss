@@ -1,14 +1,16 @@
 // Блок со спойлерами
 .spollers {
   display: grid;
-  gap: 3.6rem;
+  gap: 3.4rem;
 }
 // Спойлер
 .spollers__item {
   font-size: 1.9rem;
 
-  padding-bottom: 4rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  &:not(:last-child) {
+    padding-bottom: 3.9rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
 }
 // Заголовок спойлера
 .spollers__title {
