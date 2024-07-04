@@ -12,3 +12,12 @@ $(".expectations__slider").slick({
   centerMode: false,
   variableWidth: true,
 });
+
+$(".clients__slider").slick({
+  arrows: true,
+  dots: false,
+  infinite: true,
+  speed: 800,
+  slidesToShow: 1,
+  appendArrows: ".clients__navigation",
+});
