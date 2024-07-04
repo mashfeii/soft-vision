@@ -58,6 +58,10 @@ body {
 }
 .page {
   padding-top: var(--header-height);
+
+  section:not(:last-child) {
+    margin-bottom: 17.2rem;
+  }
 }
 
 @if ($responsiveType == 1) {
@@ -118,3 +122,6 @@ body {
 
 // Подключение крупных блоков
 @import "blocks/hero";
+@import "blocks/actual";
+@import "blocks/fields";
+@import "blocks/expectations";
