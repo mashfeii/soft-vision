@@ -13,8 +13,11 @@
   transition: all 0.3s ease;
 
   &.button--acc {
-    background-color: var(--clr-acc);
+    padding: 2.1rem 3.2rem 2.7rem;
     border-radius: 1rem;
+    @extend %f-18-500;
+
+    background-color: var(--clr-acc);
     @media (any-hover: hover) {
       &:hover {
         border-radius: 2.8rem;

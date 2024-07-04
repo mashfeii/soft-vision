@@ -48,6 +48,7 @@
 
   &__slider {
     position: relative;
+    margin-right: -2rem;
     &::before {
       pointer-events: none;
       content: "";

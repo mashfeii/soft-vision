@@ -59,10 +59,6 @@
     }
   }
   &__button {
-    padding: 2.1rem 3.2rem 2.7rem;
-    border-radius: 1rem;
-    @extend %f-18-500;
-
     &:not(:last-child) {
       margin-bottom: rem(145);
     }
