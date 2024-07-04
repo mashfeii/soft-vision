@@ -40,7 +40,7 @@ import * as flsFunctions from "./files/functions.js";
 Документация:
 Сниппет (HTML): spollers
 */
-// flsFunctions.spollers();
+flsFunctions.spollers();
 
 /*
 Модуль работы с табами
