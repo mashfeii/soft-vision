@@ -17,5 +17,35 @@
 .f-18-500 {
   @extend %f-18-500;
 }
-%f-24-500 {
+%f-19 {
+  @include adaptiveValue("font-size", 19, 15);
+  line-height: 130%;
+}
+.f-19 {
+  @extend %f-19;
+}
+%f-21 {
+  @include adaptiveValue("font-size", 21, 18);
+  line-height: 150%;
+  letter-spacing: -0.02em;
+}
+.f-21 {
+  @extend %f-21;
+}
+%f-22-400 {
+  font-weight: 400;
+  @include adaptiveValue("font-size", 22, 18);
+  line-height: 140%;
+}
+.f-22-400 {
+  @extend %f-22-400;
+}
+%f-28-500 {
+  font-weight: 500;
+  @include adaptiveValue("font-size", 28, 24);
+  line-height: 140%;
+  letter-spacing: -0.02em;
+}
+.f-28-500 {
+  @extend %f-28-500;
 }

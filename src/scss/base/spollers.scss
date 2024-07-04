@@ -1,53 +1,62 @@
 // Блок со спойлерами
 .spollers {
-	display: grid;
-	gap: 15px;
+  display: grid;
+  gap: 3.6rem;
 }
 // Спойлер
 .spollers__item {
-	font-size: rem(20);
+  font-size: 1.9rem;
+
+  padding-bottom: 4rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 // Заголовок спойлера
 .spollers__title {
-	width: 100%;
-	cursor: default;
-	text-align: left;
-	border: 1px solid #eee;
-	padding: rem(10) rem(15);
-	border-radius: rem(5);
-	position: relative;
-	._spoller-init & {
-		cursor: pointer;
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			right: 10px;
-			top: 50%;
-			background-color: #000;
-			height: 2px;
-			width: 15px;
-			transition: transform 0.5s ease 0s;
-		}
-		&::before {
-			transform: translate(-75%, -50%) rotate(40deg);
-		}
-		&::after {
-			transform: translate(0, -50%) rotate(-40deg);
-		}
-		&._spoller-active {
-			&::before {
-				transform: translateX(-75%) rotate(-40deg);
-			}
-			&::after {
-				transform: rotate(40deg);
-			}
-		}
-	}
+  width: 100%;
+  cursor: default;
+  text-align: left;
+  padding: 0.4rem 0;
+  position: relative;
+
+  font-weight: 500;
+  @include adaptiveValue("font-size", 35, 24);
+  line-height: 140%;
+  letter-spacing: -0.03em;
+  color: rgba(13, 13, 13, 0.4);
+  transition: color 0.32s ease-in-out;
+
+  ._spoller-init & {
+    cursor: pointer;
+    &._spoller-active {
+      color: var(--clr-main);
+      + .spollers__body::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4.2rem;
+        height: 0.3rem;
+        background-color: #61bf03;
+        will-change: width;
+        animation: bodyLine 0.5s ease 0.35s forwards;
+      }
+    }
+  }
 }
-// Контент спойлера
 .spollers__body {
-	padding: rem(20);
-	border-radius: rem(5);
-	border: 1px solid #eee;
+  position: relative;
+  max-width: 44rem;
+  @include adaptiveValue("font-size", 19, 15);
+  line-height: 130%;
+  color: rgba(13, 13, 13, 0.7);
+}
+
+@keyframes bodyLine {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 34.5rem;
+    opacity: 1;
+  }
 }
