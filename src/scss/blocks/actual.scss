@@ -1,0 +1,84 @@
+.actual {
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: em(9, 90);
+    }
+  }
+  &__description {
+    color: rgba(13, 13, 13, 0.7);
+  }
+
+  &__cards {
+    grid-column: 6 / span 7;
+    display: flex;
+    gap: 1.7rem;
+  }
+  &__cards-col {
+    @extend %fl-c;
+    gap: 1.7rem;
+  }
+
+  &__card {
+    padding: 3rem 2.6rem;
+    background-color: var(--clr-lgt);
+    border-radius: 1rem;
+    transition: all 0.32s ease;
+
+    @media (any-hover: hover) {
+      &:hover {
+        transform: translateY(-0.2rem);
+        box-shadow: 0 0.3rem 0.5rem rgba(13, 13, 13, 0.2);
+
+        svg {
+          fill: var(--clr-acc);
+        }
+      }
+    }
+  }
+  &__card-icon {
+    width: 6rem;
+    height: 6rem;
+
+    svg {
+      width: 6rem;
+      height: 6rem;
+      fill: var(--clr-main);
+      transition: fill 0.6s cubic-bezier(0, 0.55, 0.45, 1);
+    }
+
+    picture,
+    img {
+      max-width: 100%;
+      object-fit: contain;
+    }
+
+    .actual__card--1 & {
+      &:not(:last-child) {
+        margin-bottom: 15.15rem;
+      }
+    }
+    .actual__card--2 & {
+      &:not(:last-child) {
+        margin-bottom: 15.15rem;
+      }
+    }
+    .actual__card--3 & {
+      &:not(:last-child) {
+        margin-bottom: 7.9rem;
+      }
+    }
+    .actual__card--4 & {
+      &:not(:last-child) {
+        margin-bottom: 22.4rem;
+      }
+    }
+  }
+  &__card-title {
+    &:not(:last-child) {
+      margin-bottom: em(5, 28);
+    }
+  }
+  &__card-description {
+    color: rgba(13, 13, 13, 0.7);
+  }
+}

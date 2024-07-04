@@ -1,0 +1,20 @@
+.fields {
+  &__title {
+    max-width: 4rem;
+
+    &:not(:last-child) {
+      margin-bottom: em(19, 90);
+    }
+  }
+
+  &__content {
+    padding-right: 5rem;
+  }
+
+  &__image {
+    img,
+    picture {
+      max-width: 100%;
+    }
+  }
+}
