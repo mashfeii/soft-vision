@@ -1,0 +1,117 @@
+.clients {
+  &__content {
+    position: relative;
+    z-index: 3;
+    @extend %fl-c;
+  }
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: em(7, 90);
+    }
+  }
+  &__description {
+    margin-bottom: auto;
+    color: rgba(13, 13, 13, 0.7);
+  }
+  &__navigation {
+    @extend %fl-r-ct;
+    gap: 1rem;
+
+    .slick-arrow {
+      font-size: 0;
+      flex: 0 0 4.8rem;
+      width: 4.8rem;
+      height: 4.8rem;
+      background: var(--clr-white);
+      border: 1px solid #d1d3d6;
+      box-shadow: 0px 3px 9px -2px rgba(7, 7, 7, 0.15);
+      border-radius: 3rem;
+      background-repeat: no-repeat;
+      background-size: 1.2rem 1.2rem;
+      background-position: center;
+
+      transition: box-shadow 0.32s ease-in-out;
+
+      @media (any-hover: hover) {
+        &:hover {
+          box-shadow: 0px 3px 9px -1px rgba(7, 7, 7, 0.25);
+        }
+      }
+    }
+    .slick-prev {
+      background-image: url("@img/icons/left-arrow.svg");
+    }
+    .slick-next {
+      background-image: url("@img/icons/right-arrow.svg");
+    }
+  }
+
+  &__slider {
+    position: relative;
+    &::before {
+      pointer-events: none;
+      content: "";
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      top: 0;
+      transform: translateX(-100%);
+      background-color: var(--clr-white);
+      width: 500%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    .slick-list {
+      overflow: visible !important;
+    }
+  }
+  &__slide {
+    display: flex !important;
+    flex-direction: column;
+    position: relative;
+    min-height: 46rem;
+    padding: 4rem 3.6rem;
+    background: var(--clr-lgt);
+    border-radius: 1rem;
+    opacity: 0.5;
+    transition: all 0.5s ease-in-out;
+
+    &.slick-current {
+      opacity: 1;
+    }
+
+    &:not(:last-child) {
+      margin-right: 3.7rem;
+    }
+
+    &::before {
+      content: '"';
+      position: absolute;
+      top: 3.6rem;
+      right: 3.5rem;
+      font-family: var(--ff-acc);
+      font-weight: 700;
+      @include adaptiveValue("font-size", 140, 100);
+      line-height: 90%;
+      letter-spacing: -0.05em;
+      text-transform: uppercase;
+    }
+  }
+  &__slide-logo {
+    margin-bottom: auto;
+    picture,
+    img {
+      max-width: 15rem;
+    }
+  }
+  &__slide-text {
+    margin-top: 12rem;
+    &:not(:last-child) {
+      margin-bottom: em(15, 28);
+    }
+  }
+  &__slide-addition {
+    color: rgba(13, 13, 13, 0.5);
+  }
+}

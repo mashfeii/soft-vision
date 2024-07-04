@@ -65,11 +65,18 @@ body {
   section.counters:not(:first-child) {
     margin-top: 16rem;
   }
+  section.clients:not(:first-child) {
+    margin-top: 15rem;
+  }
   section.cover + section.cover,
   section.cover-dark + section.cover,
   section.cover + section.cover-dark,
   section.cover-dark + section.cover-dark {
     margin-top: 0;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 14.7rem;
   }
 }
 
@@ -135,3 +142,5 @@ body {
 @import "blocks/fields";
 @import "blocks/expectations";
 @import "blocks/counters";
+@import "blocks/trust";
+@import "blocks/clients";

@@ -1,0 +1,56 @@
+.trust {
+  padding-top: 12.2rem;
+  padding-bottom: 11.5rem;
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: em(37, 90);
+    }
+  }
+
+  &__body {
+  }
+
+  &__col {
+    @extend %fl-c;
+    gap: rem(10);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  &__item {
+    position: relative;
+    @extend %fl-a-ct;
+    padding: 1.7rem;
+    height: rem(220);
+    border-right: 1px solid transparent;
+    transition: all 0.32s ease-in-out;
+
+    picture,
+    img {
+      max-width: 20rem;
+      max-height: 10rem;
+      object-fit: contain;
+      transition: transform 0.32s ease-in-out;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        picture,
+        img {
+          transform: scale(1.1) translateY(-1.2rem);
+        }
+      }
+    }
+  }
+  &__subtitle {
+    position: absolute;
+    max-width: 100%;
+    top: 0;
+    left: 1.7rem;
+    @include adaptiveValue("font-size", 16, 11);
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: rgba(13, 13, 13, 0.5);
+  }
+}
