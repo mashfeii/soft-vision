@@ -1,7 +1,29 @@
 .counters {
+  &__container {
+    //== 992px ==//
+    @media(max-width: $tb) {
+      grid-template-columns: 1fr;
+      row-gap: 7.2rem;
+    }
+  }
+  &__card {
+    //== 992px ==//
+    @media(max-width: $tb) {
+      max-width: 67rem;
+    }
+  }
   &__title {
     &:not(:last-child) {
       margin-bottom: rem(54);
+
+      //== 992px ==//
+      @media(max-width: $tb) {
+        margin-bottom: 3rem;
+      }
+      //== 768px ==//
+      @media(max-width: $mb) {
+        margin-bottom: 2rem;
+      }
     }
   }
   &__title-counter {
@@ -28,12 +50,21 @@
     @include adaptiveValue("font-size", 35, 24);
     line-height: 120%;
     color: rgba(13, 13, 13, 0.5);
+
+    span {
+      color: var(--clr-main);
+    }
+
+    //== 992px ==//
+    @media(max-width: $tb) {
+      padding-right: 0;
+    }
   }
 
   &__link {
     display: inline-block;
     position: relative;
-    padding-bottom: 0.9rem;
+    padding-bottom: 0.5rem;
 
     font-weight: 500;
     @include adaptiveValue("font-size", 20, 15);

@@ -23,12 +23,16 @@
         border-radius: 2.8rem;
       }
     }
+
+    //== 768px ==//
+    @media(max-width: $mb) {
+      padding: 1.9rem 2.8rem 2.3rem;
+    }
   }
 
   @media (any-hover: hover) {
     &:hover {
       background-color: var(--clr-acc);
-      color: var(--clr-white);
       border-radius: 1rem;
     }
   }

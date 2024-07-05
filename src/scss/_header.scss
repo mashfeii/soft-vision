@@ -12,7 +12,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: rem(5) 0;
+    padding: rem(15) 0;
     min-height: var(--header-height);
     transition: all 0.32s ease-in-out;
     border-bottom: 2px solid transparent;
@@ -35,15 +35,56 @@
     padding: 0 4rem;
     @extend %fl-r-ctb;
     gap: 6rem;
+
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      padding: 0 2rem;
+      gap: 4rem;
+    }
   }
 
   &__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     margin-right: 5rem;
+
+    //== 1360px ==//
+    @media (max-width: $note-l) {
+      margin-right: 0;
+    }
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      margin-right: 3rem;
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      picture,
+      img,
+      svg {
+        width: 13.7rem;
+        height: 2.1rem;
+      }
+    }
   }
 
   &__contacts {
     @extend %fl-r-ct;
     gap: 0.9rem;
+
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      display: grid;
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      .header__phone,
+      .header__social {
+        display: none;
+        margin: 0;
+      }
+    }
   }
 
   &__phone {
@@ -78,9 +119,32 @@
     }
   }
 
+  &__menu {
+    @media (max-width: em(1099.98)) {
+      max-width: 20rem;
+    }
+  }
+
   &__button {
     &:not(:first-child) {
       margin-left: 1.5rem;
+    }
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      grid-column: span 3;
+      grid-row: 1;
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      font-size: 0;
+      flex: 0 0 2.4rem;
+      width: 2.4rem;
+      height: 2.4rem;
+      border-radius: 0;
+      padding: 0;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-image: url("@img/icons/mobile-phone.svg");
     }
   }
 }

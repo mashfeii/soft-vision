@@ -6,22 +6,60 @@
   }
 
   &__title {
+    position: relative;
+    z-index: 3;
     &:not(:last-child) {
-      margin-bottom: em(4, 90);
+      margin-bottom: rem(5);
     }
+
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      max-width: 25rem;
+    }
+  }
+  &__description {
+    position: relative;
+    z-index: 3;
+    line-height: 1.4;
   }
 
   &__slider {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 3;
+      width: 200%;
+      height: 120%;
+      transform: translateX(calc(-100% + 0.5rem));
+      top: -20%;
+      left: 0;
+      background-color: var(--clr-black);
+
+      //== 768px ==//
+      @media (max-width: $mb) {
+        transform: translateX(-100%);
+      }
+    }
     .slick-list {
       z-index: 2;
       overflow: visible !important;
       padding-top: 3.6rem;
       padding-bottom: 2rem;
+
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        padding-top: 3.1rem;
+      }
     }
     @extend %ml;
     padding-left: 2rem;
-  }
 
+    //== 768px ==//
+    @media (max-width: $mb) {
+      padding-left: 0.45rem;
+    }
+  }
   &__slide {
     display: flex !important;
     flex-direction: column;
@@ -31,13 +69,49 @@
     height: 60rem;
     padding: 4.2rem 4.5rem;
     transition: all 0.32s ease-in-out;
+    outline: none;
+
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      height: 50rem;
+    }
+    //== 992px ==//
+    @media (max-width: $tb) {
+      height: 45.6rem;
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      height: 42.6rem;
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      height: 37.6rem;
+    }
 
     &:nth-child(3n + 1),
     &:nth-child(3n + 3) {
       width: 42rem;
+
+      //== 768px ==//
+      @media(max-width: $mb) {
+        width: 36rem;
+      }
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        width: 26.3rem;
+      }
     }
     &:nth-child(3n + 2) {
       width: 61rem;
+
+      //== 768px ==//
+      @media(max-width: $mb) {
+        width: 54rem;
+      }
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        width: 33.2rem;
+      }
     }
 
     &:not(:last-child) {
@@ -51,7 +125,6 @@
       }
     }
   }
-
   &__slide--flying {
     position: relative;
     &::before,
@@ -60,22 +133,63 @@
       position: absolute;
       @extend %bg-con;
     }
-    &::before {
+    &::after {
       top: -4.8rem;
       left: 0.8rem;
       width: 43rem;
       height: 45rem;
       background-image: url("@img/expectations/suitcase-01.png");
+
+      //== 1200px ==//
+      @media(max-width: $note-m) {
+        width: 38rem;
+        height: 40rem;
+      }
+      //== 992px ==//
+      @media(max-width: $tb) {
+        width: 35rem;
+        height: 37rem;
+      }
+      //== 768px ==//
+      @media(max-width: $mb) {
+        width: 30rem;
+        height: 32rem;
+      }
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        width: 21.5rem;
+        height: 22.5rem;
+      }
     }
-    &::after {
+    &::before {
       top: -25%;
       left: 30%;
       width: 42rem;
       height: 42rem;
       background-image: url("@img/expectations/suitcase-02.png");
+
+      //== 1200px ==//
+      @media(max-width: $note-m) {
+        width: 40rem;
+        height: 40rem;
+      }
+      //== 992px ==//
+      @media(max-width: $tb) {
+        width: 34rem;
+        height: 34rem;
+      }
+      //== 768px ==//
+      @media(max-width: $mb) {
+        width: 29rem;
+        height: 29rem;
+      }
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        width: 21rem;
+        height: 21rem;
+      }
     }
   }
-
   &__slide-title {
     font-weight: 400;
     max-width: 30.7rem;

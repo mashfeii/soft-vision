@@ -3,20 +3,52 @@
     &:not(:last-child) {
       margin-bottom: em(9, 90);
     }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      &:not(:last-child) {
+        margin-bottom: rem(6);
+      }
+    }
   }
   &__description {
     max-width: 40rem;
     color: rgba(13, 13, 13, 0.7);
   }
 
+  &__content {
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      grid-column: span 6;
+    }
+  }
+
   &__cards {
     grid-column: 6 / span 7;
     display: flex;
     gap: 1.7rem;
+
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      grid-column: span 12;
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      grid-column: span 6;
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      flex-direction: column;
+      gap: 1.2rem;
+    }
   }
   &__cards-col {
     @extend %fl-c;
     gap: 1.7rem;
+
+    //== 576px ==//
+    @media(max-width: $mb-m) {
+      gap: 1.2rem;
+    }
   }
 
   &__card {
@@ -24,6 +56,11 @@
     background-color: var(--clr-lgt);
     border-radius: 1rem;
     transition: all 0.32s ease;
+
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      padding: 2.2rem;
+    }
 
     @media (any-hover: hover) {
       &:hover {
@@ -41,11 +78,23 @@
     width: 6rem;
     height: 6rem;
 
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      width: 4rem;
+      height: 4rem;
+    }
+
     svg {
       width: 4.6rem;
       height: 4.6rem;
       fill: var(--clr-main);
       transition: fill 0.6s cubic-bezier(0, 0.55, 0.45, 1);
+
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        width: 3rem;
+        height: 3rem;
+      }
     }
 
     picture,
@@ -57,27 +106,65 @@
     .actual__card--1 & {
       &:not(:last-child) {
         margin-bottom: 15.4rem;
+        //== 992px ==//
+        @media (max-width: $tb) {
+          margin-bottom: 7.7rem;
+        }
+        //== 576px ==//
+        @media (max-width: $mb-m) {
+          margin-bottom: 7.4rem;
+        }
       }
     }
     .actual__card--2 & {
       &:not(:last-child) {
         margin-bottom: 15.3rem;
+        //== 992px ==//
+        @media (max-width: $tb) {
+          margin-bottom: 7.65rem;
+        }
+        //== 576px ==//
+        @media (max-width: $mb-m) {
+          margin-bottom: 7.4rem;
+        }
       }
     }
     .actual__card--3 & {
       &:not(:last-child) {
         margin-bottom: 8.2rem;
+        //== 992px ==//
+        @media (max-width: $tb) {
+          margin-bottom: 4.1rem;
+        }
+        //== 576px ==//
+        @media (max-width: $mb-m) {
+          margin-bottom: 7.4rem;
+        }
       }
     }
     .actual__card--4 & {
       &:not(:last-child) {
         margin-bottom: 22.45rem;
+        //== 992px ==//
+        @media (max-width: $tb) {
+          margin-bottom: 11.275rem;
+        }
+        //== 576px ==//
+        @media (max-width: $mb-m) {
+          margin-bottom: 7.4rem;
+        }
       }
     }
   }
   &__card-title {
     &:not(:last-child) {
       margin-bottom: em(5, 28);
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      &:not(:last-child) {
+        margin-bottom: rem(2);
+      }
     }
   }
   &__card-description {

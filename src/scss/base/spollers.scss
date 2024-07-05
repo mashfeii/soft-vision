@@ -2,6 +2,11 @@
 .spollers {
   display: grid;
   gap: 3.4rem;
+
+  //== 576px ==//
+  @media(max-width: $mb-m) {
+    gap: 1.8rem;
+  }
 }
 // Спойлер
 .spollers__item {
@@ -10,6 +15,11 @@
   &:not(:last-child) {
     padding-bottom: 3.9rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+    //== 576px ==//
+    @media(max-width: $mb-m) {
+      padding-bottom: 1.8rem;
+    }
   }
 }
 // Заголовок спойлера
@@ -19,6 +29,11 @@
   text-align: left;
   padding: 0.4rem 0;
   position: relative;
+
+  //== 576px ==//
+  @media (max-width: $mb-m) {
+    padding-bottom: 0;
+  }
 
   font-weight: 500;
   @include adaptiveValue("font-size", 35, 24);
@@ -40,6 +55,11 @@
         background-color: #61bf03;
         will-change: width;
         animation: bodyLine 0.5s ease 0.35s forwards;
+
+        //== 576px ==//
+        @media(max-width: $mb-m) {
+          bottom: -2rem;
+        }
       }
     }
   }
@@ -50,6 +70,28 @@
   @include adaptiveValue("font-size", 19, 15);
   line-height: 130%;
   color: rgba(13, 13, 13, 0.7);
+
+  //== 768px ==//
+  @media (max-width: $mb) {
+    max-width: 67rem;
+  }
+}
+.spollers__body-image {
+  display: none;
+
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+  border-radius: 1rem;
+  //== 992px ==//
+  @media (max-width: $tb) {
+    margin-top: 1.7rem;
+    display: block;
+  }
+  //== 576px ==//
+  @media(max-width: $mb-m) {
+    height: 21.9rem;
+  }
 }
 
 @keyframes bodyLine {
@@ -58,7 +100,7 @@
     opacity: 0;
   }
   to {
-    width: 34.5rem;
+    width: 71.875%;
     opacity: 1;
   }
 }

@@ -2,6 +2,11 @@
   position: relative;
   padding-top: 7.52rem;
 
+  //== 768px ==//
+  @media (max-width: $mb) {
+    padding-top: 6.9rem;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -30,6 +35,13 @@
     &:not(:last-child) {
       margin-bottom: em(37, 20);
     }
+
+    //== 768px ==//
+    @media (max-width: $mb) {
+      &:not(:last-child) {
+        margin-bottom: rem(21);
+      }
+    }
   }
   &__title {
     max-width: rem(1089);
@@ -44,6 +56,13 @@
     &:not(:last-child) {
       margin-bottom: em(6, 110);
     }
+
+    //== 768px ==//
+    @media (max-width: $mb) {
+      &:not(:last-child) {
+        margin-bottom: rem(6);
+      }
+    }
   }
   &__addition {
     max-width: rem(656);
@@ -57,10 +76,42 @@
     &:not(:last-child) {
       margin-bottom: em(34, 22);
     }
+
+    //== 768px ==//
+    @media (max-width: $mb) {
+      &:not(:last-child) {
+        margin-bottom: rem(23);
+      }
+    }
   }
   &__button {
     &:not(:last-child) {
       margin-bottom: rem(145);
+    }
+
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      &:not(:last-child) {
+        margin-bottom: 12rem;
+      }
+    }
+    //== 992px ==//
+    @media (max-width: $tb) {
+      &:not(:last-child) {
+        margin-bottom: 10rem;
+      }
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      &:not(:last-child) {
+        margin-bottom: 8rem;
+      }
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      &:not(:last-child) {
+        margin-bottom: 7.2rem;
+      }
     }
   }
 
@@ -75,6 +126,25 @@
     border-radius: 1rem;
     @extend %bg-cov;
     background-image: url("@img/hero/image.png");
+
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      height: 50rem;
+    }
+    //== 992px ==//
+    @media (max-width: $tb) {
+      height: 40rem;
+      padding: 3rem;
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      height: 29rem;
+      padding: 2.5rem;
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      height: 25.4rem;
+    }
   }
   &__subtitle {
     font-weight: 500;
