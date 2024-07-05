@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+  @@include('html/general/_head.htm',{ "title":"Soft Vision | О продукте" })
+
+  <body>
+    <div class="wrapper">
+      @@include('html/general/_header.htm',{})
+      <main class="page">
+        @@include("html/blocks/hero--product.htm", {})
+        @@include("html/blocks/application.htm", {})
+        @@include("html/blocks/application--reversed.htm", {})
+        @@include("html/blocks/application--small.htm", {})
+        <section class="page__clients clients clients--images cover">
+          <div class="clients__container container grid">
+            <div class="clients__content col-4">
+              <h2 class="clients__title title">
+                Области <br />
+                применения
+              </h2>
+              <p class="clients__description f-21">
+                Необходимо выделить 3-5 основных сфер применения: либо по
+                отрослям бизнеса, либо по иному принципу важно хватить
+              </p>
+              <div class="clients__navigation"></div>
+            </div>
+            <div class="clients__slider col-7">
+              <div class="clients__slide">
+               <img src="@img/documents/01.jpg" alt=""> 
+              </div>
+              <div class="clients__slide">
+               <img src="@img/documents/02.jpg" alt=""> 
+              </div>
+              <div class="clients__slide">
+               <img src="@img/documents/03.jpg" alt=""> 
+              </div>
+              <div class="clients__slide">
+               <img src="@img/documents/01.jpg" alt=""> 
+              </div>
+              <div class="clients__slide">
+               <img src="@img/documents/02.jpg" alt=""> 
+              </div>
+              <div class="clients__slide">
+               <img src="@img/documents/03.jpg" alt=""> 
+              </div>
+            </div>
+          </div>
+        </section>
+        @@include("html/blocks/application--horizontal.htm", {})
+        @@include("html/blocks/application--small-reversed.htm", {})
+      </main>
+      @@include('html/general/_footer.htm',{})
+    </div>
+    @@include('html/general/_popup.htm',{}) @@include('html/general/_js.htm',{})
+  </body>
+</html>
