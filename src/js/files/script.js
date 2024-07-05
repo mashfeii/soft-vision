@@ -13,7 +13,7 @@ $(".expectations__slider").slick({
   variableWidth: true,
 });
 
-$(".clients__slider").slick({
+$(".clients--default .clients__slider").slick({
   arrows: true,
   dots: false,
   infinite: true,
@@ -21,3 +21,13 @@ $(".clients__slider").slick({
   slidesToShow: 1,
   appendArrows: ".clients__navigation",
 });
+
+$(".clients--images .clients__slider").slick({
+  arrows: true,
+  dots: false,
+  infinite: true,
+  variableWidth: true,
+  speed: 800,
+  appendArrows: ".clients__navigation",
+});
+
