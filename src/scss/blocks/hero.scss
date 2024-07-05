@@ -2,6 +2,13 @@
   position: relative;
   padding-top: 7.52rem;
 
+  &.hero--product {
+    //== 768px ==//
+    @media (min-width: $mb) {
+      padding-top: 8.45rem;
+    }
+  }
+
   //== 768px ==//
   @media (max-width: $mb) {
     padding-top: 6.9rem;
@@ -54,7 +61,7 @@
     text-transform: uppercase;
 
     &:not(:last-child) {
-      margin-bottom: em(6, 110);
+      margin-bottom: em(2, 110);
     }
 
     //== 768px ==//
@@ -67,9 +74,13 @@
   &__addition {
     max-width: rem(656);
 
+    .hero--product & {
+      max-width: 104.4rem;
+    }
+
     font-weight: 500;
     @include adaptiveValue("font-size", 22, 15);
-    line-height: 140%;
+    line-height: 1.5;
     letter-spacing: -0.02em;
     color: rgba(13, 13, 13, 0.6);
 
@@ -126,6 +137,20 @@
     border-radius: 1rem;
     @extend %bg-cov;
     background-image: url("@img/hero/image.png");
+
+    &:not(:first-child) {
+      margin-top: 2.9rem;
+    }
+
+    .hero--product & {
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        &:not(:first-child) {
+          margin-top: 1.2rem;
+        }
+        height: 15.1rem;
+      }
+    }
 
     //== 1200px ==//
     @media (max-width: $note-m) {

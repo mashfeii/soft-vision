@@ -82,6 +82,30 @@ body {
       margin-top: 7.2rem;
     }
   }
+  section.application--horizontal:not(:first-child) {
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      margin-top: 13rem;
+    }
+  }
+  section.application--small-reversed:not(:first-child) {
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      margin-top: 12rem;
+    }
+  }
+  section.application:not(:first-child) {
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      margin-top: 12.2rem;
+    }
+  }
+  section.application--horizontal:not(:first-child) {
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      margin-top: 14.5rem;
+    }
+  }
   section.counters:not(:first-child) {
     //== 1200px ==//
     @media (min-width: $note-m) {
@@ -195,3 +219,4 @@ body {
 @import "blocks/counters";
 @import "blocks/trust";
 @import "blocks/clients";
+@import "blocks/application";
