@@ -26,6 +26,10 @@
     background-image: url("@img/hero/back.png");
   }
 
+  &.hero--about::before {
+    display: none;
+  }
+
   &__container {
     @extend %fl-a-ct;
     flex-direction: column;
@@ -180,6 +184,33 @@
 
     span {
       color: rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  &__text {
+    text-align: left;
+    max-width: 98rem;
+    font-weight: 500;
+    @include adaptiveValue("font-size", 22, 16);
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: rgba(16, 24, 37, 0.6);
+
+    &:last-child {
+      margin-top: 9.8rem;
+
+      //== 992px ==//
+      @media (max-width: $tb) {
+        margin-top: 8rem;
+      }
+      //== 768px ==//
+      @media (max-width: $mb) {
+        margin-top: 6.5rem;
+      }
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        margin-top: 5.5rem;
+      }
     }
   }
 }

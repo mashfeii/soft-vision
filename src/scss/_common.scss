@@ -11,6 +11,15 @@
   text-transform: uppercase;
 }
 
+.subtitle {
+  font-family: var(--ff-acc);
+  font-weight: 700;
+  @include adaptiveValue("font-size", 70, 48);
+  line-height: 90%;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
 .cover {
   padding-top: 12.1rem;
   padding-bottom: 12.7rem;

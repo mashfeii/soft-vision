@@ -1,0 +1,30 @@
+.safety {
+  &.cover-dark {
+    padding-top: 12rem;
+    padding-bottom: 10.9rem;
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: em(34.5, 70);
+    }
+  }
+  &__card {
+    .card__icon:not(:last-child) {
+      margin-bottom: 12.7rem;
+
+      //== 992px ==//
+      @media (max-width: $tb) {
+        margin-bottom: 7.5rem;
+      }
+    }
+    .card__icon svg {
+      fill: var(--clr-acc);
+    }
+
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      grid-column: span 6;
+    }
+  }
+}

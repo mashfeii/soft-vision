@@ -88,6 +88,18 @@ body {
       margin-top: 13rem;
     }
   }
+  section.safety:not(:first-child) {
+    //== 992px ==//
+    @media (min-width: $tb) {
+      margin-top: 10rem;
+    }
+  }
+  section.team:not(:first-child) {
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      margin-top: 12rem;
+    }
+  }
   section.application--small-reversed:not(:first-child) {
     //== 1200px ==//
     @media (min-width: $note-m) {
@@ -204,8 +216,9 @@ body {
 @import "common";
 
 // Подключение стилей небольших элементов
-@import "elements/logo";
 @import "elements/menu";
+@import "elements/card";
+@import "elements/image-card";
 
 // Подключение стилей отдельных блоков
 @import "header";
@@ -220,3 +233,5 @@ body {
 @import "blocks/trust";
 @import "blocks/clients";
 @import "blocks/application";
+@import "blocks/safety";
+@import "blocks/team";

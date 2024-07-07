@@ -46,128 +46,56 @@
     gap: 1.7rem;
 
     //== 576px ==//
-    @media(max-width: $mb-m) {
+    @media (max-width: $mb-m) {
       gap: 1.2rem;
     }
   }
 
   &__card {
-    padding: 3rem 4rem 3rem 2.6rem;
     background-color: var(--clr-lgt);
-    border-radius: 1rem;
-    transition: all 0.32s ease;
-
-    //== 576px ==//
-    @media (max-width: $mb-m) {
-      padding: 2.2rem;
-    }
-
-    @media (any-hover: hover) {
-      &:hover {
-        transform: translateY(-0.2rem);
-        box-shadow: 0 0.3rem 0.5rem rgba(13, 13, 13, 0.2);
-
-        svg {
-          fill: var(--clr-acc);
-        }
-      }
-    }
   }
-  &__card-icon {
-    @extend %fl-a-ct;
-    width: 6rem;
-    height: 6rem;
-
-    //== 576px ==//
-    @media (max-width: $mb-m) {
-      width: 4rem;
-      height: 4rem;
-    }
-
-    svg {
-      width: 4.6rem;
-      height: 4.6rem;
-      fill: var(--clr-main);
-      transition: fill 0.6s cubic-bezier(0, 0.55, 0.45, 1);
-
-      //== 576px ==//
-      @media (max-width: $mb-m) {
-        width: 3rem;
-        height: 3rem;
-      }
-    }
-
-    picture,
-    img {
-      max-width: 100%;
-      object-fit: contain;
-    }
-
-    .actual__card--1 & {
-      &:not(:last-child) {
-        margin-bottom: 15.4rem;
-        //== 992px ==//
-        @media (max-width: $tb) {
-          margin-bottom: 7.7rem;
-        }
-        //== 576px ==//
-        @media (max-width: $mb-m) {
-          margin-bottom: 7.4rem;
-        }
-      }
-    }
-    .actual__card--2 & {
-      &:not(:last-child) {
-        margin-bottom: 15.3rem;
-        //== 992px ==//
-        @media (max-width: $tb) {
-          margin-bottom: 7.65rem;
-        }
-        //== 576px ==//
-        @media (max-width: $mb-m) {
-          margin-bottom: 7.4rem;
-        }
-      }
-    }
-    .actual__card--3 & {
-      &:not(:last-child) {
-        margin-bottom: 8.2rem;
-        //== 992px ==//
-        @media (max-width: $tb) {
-          margin-bottom: 4.1rem;
-        }
-        //== 576px ==//
-        @media (max-width: $mb-m) {
-          margin-bottom: 7.4rem;
-        }
-      }
-    }
-    .actual__card--4 & {
-      &:not(:last-child) {
-        margin-bottom: 22.45rem;
-        //== 992px ==//
-        @media (max-width: $tb) {
-          margin-bottom: 11.275rem;
-        }
-        //== 576px ==//
-        @media (max-width: $mb-m) {
-          margin-bottom: 7.4rem;
-        }
-      }
-    }
-  }
-  &__card-title {
-    &:not(:last-child) {
-      margin-bottom: em(5, 28);
+  &__card--1 .card__icon:not(:last-child) {
+    margin-bottom: 15.4rem;
+    //== 992px ==//
+    @media (max-width: $tb) {
+      margin-bottom: 7.7rem;
     }
     //== 576px ==//
     @media (max-width: $mb-m) {
-      &:not(:last-child) {
-        margin-bottom: rem(2);
-      }
+      margin-bottom: 7.4rem;
     }
   }
-  &__card-description {
-    color: rgba(13, 13, 13, 0.7);
+  &__card--2 .card__icon:not(:last-child) {
+    margin-bottom: 15.3rem;
+    //== 992px ==//
+    @media (max-width: $tb) {
+      margin-bottom: 7.65rem;
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      margin-bottom: 7.4rem;
+    }
+  }
+  &__card--3 .card__icon:not(:last-child) {
+    margin-bottom: 8.2rem;
+    //== 992px ==//
+    @media (max-width: $tb) {
+      margin-bottom: 4.1rem;
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      margin-bottom: 7.4rem;
+    }
+  }
+  &__card--4 .card__icon:not(:last-child) {
+    margin-bottom: 22.45rem;
+    //== 992px ==//
+    @media (max-width: $tb) {
+      margin-bottom: 11.275rem;
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      margin-bottom: 7.4rem;
+    }
   }
 }
