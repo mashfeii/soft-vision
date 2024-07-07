@@ -59,7 +59,8 @@ body {
 .page {
   padding-top: var(--header-height);
 
-  section:not(:first-child) {
+  section:not(:first-child),
+  .map {
     margin-top: 17.2rem;
     //== 1360px ==//
     @media (max-width: $note-l) {
@@ -80,6 +81,12 @@ body {
     //== 576px ==//
     @media (max-width: $mb-m) {
       margin-top: 7.2rem;
+    }
+  }
+  .map:not(:first-child) {
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      margin-top: 14rem;
     }
   }
   section.safety:not(:first-child) {
@@ -153,6 +160,10 @@ body {
 
   &:not(:last-child) {
     margin-bottom: 14.7rem;
+
+    .page-map & {
+      margin-bottom: 0;
+    }
 
     //== 1200px ==//
     @media (max-width: $note-m) {

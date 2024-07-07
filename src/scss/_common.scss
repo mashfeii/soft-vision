@@ -145,3 +145,21 @@
 .slick-slide {
   outline: none;
 }
+
+.map {
+  width: 100%;
+  height: 53.2rem;
+
+  //== 992px ==//
+  @media (max-width: $tb) {
+    height: 45rem;
+  }
+  //== 768px ==//
+  @media (max-width: $mb) {
+    height: 40rem;
+  }
+  //== 576px ==//
+  @media (max-width: $mb-m) {
+    height: 36.3rem;
+  }
+}
