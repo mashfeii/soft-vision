@@ -1,17 +1,70 @@
 .card {
-  img {
-    max-width: 100%;
-    object-fit: cover;
-    height: rem(408);
-    border-radius: rem(5);
-    &:not(:last-child) {
-      margin-bottom: rem(23);
+  padding: 3rem 4rem 3rem 2.6rem;
+  border-radius: 1rem;
+  background-color: var(--clr-white);
+  transition: all 0.32s ease;
+
+  //== 576px ==//
+  @media (max-width: $mb-m) {
+    padding: 2.2rem;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      transform: translateY(-0.2rem);
+      box-shadow: 0 0.3rem 0.5rem rgba(13, 13, 13, 0.2);
+
+      svg {
+        fill: var(--clr-acc);
+      }
+    }
+  }
+
+  &__icon {
+    @extend %fl-a-ct;
+    width: 6rem;
+    height: 6rem;
+
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    svg {
+      width: 4.6rem;
+      height: 4.6rem;
+      fill: var(--clr-main);
+      transition: fill 0.6s cubic-bezier(0, 0.55, 0.45, 1);
+
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+
+    picture,
+    img {
+      max-width: 100%;
+      object-fit: contain;
     }
   }
 
   &__title {
+    color: var(--clr-main);
     &:not(:last-child) {
-      margin-bottom: rem(7);
+      margin-bottom: em(5, 28);
     }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      &:not(:last-child) {
+        margin-bottom: rem(2);
+      }
+    }
+  }
+
+  &__description {
+    color: rgba(13, 13, 13, 0.7);
   }
 }
