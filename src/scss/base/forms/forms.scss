@@ -1,18 +1,106 @@
 //<FORM>
 // Снипет (HTML):
 .form {
-	&__row {
-	}
-	&__column {
-	}
-	&__line {
-	}
-	&__input {
-	}
-	&__button {
-	}
-	&__error {
-	}
+  @extend %fl-c;
+  gap: 2rem;
+  //== 576px ==//
+  @media (max-width: $mb-m) {
+    gap: 1rem;
+  }
+  &__row {
+  }
+  &__column {
+  }
+  &__line {
+  }
+  &__label {
+    pointer-events: none;
+    position: absolute;
+    top: 3rem;
+    left: 4.5rem;
+    @include adaptiveValue("font-size", 28, 20);
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    color: rgba(13, 13, 13, 0.4);
+    transition: transform 0.32s ease-in-out;
+
+    //== 992px ==//
+    @media (max-width: $tb) {
+      top: 2.2rem;
+      left: 3.4rem;
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      left: 2.5rem;
+    }
+  }
+  &__input {
+    position: relative;
+
+    .input:focus + .form__label,
+    .input.input--inserted + .form__label {
+      transform: translate(-21.2%, -1.75rem) scale(0.57);
+
+      //== 992px ==//
+      @media (max-width: $tb) {
+        transform: translate(-21.2%, -1.4rem) scale(0.57);
+      }
+      //== 768px ==//
+      @media (max-width: $mb) {
+        transform: translate(-16.6%, -1.4rem) scale(0.57);
+      }
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        transform: translate(-19.6%, -1.4rem) scale(0.6);
+      }
+    }
+  }
+  &__button {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 4.5rem 3.5rem;
+    justify-content: space-between;
+    gap: 2.5rem;
+    align-items: center;
+    background-color: var(--clr-acc);
+    border-radius: 1rem;
+
+    font-weight: 600;
+    @include adaptiveValue("font-size", 28, 20);
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    color: var(--clr-main);
+
+    span:last-child {
+      transition: transform 0.32s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    }
+
+    svg {
+      flex: 0 0 2.1rem;
+      height: 1.9rem;
+      fill: var(--clr-main);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        span:last-child,
+        svg {
+          transform: translateX(-2rem) scale(1.2);
+        }
+      }
+    }
+
+    //== 992px ==//
+    @media (max-width: $tb) {
+      padding: 2.5rem 3.5rem;
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      padding: 1.95rem 2.5rem 2.45rem;
+    }
+  }
+  &__error {
+  }
 }
 //</FORM>
 
@@ -22,7 +110,7 @@
 
 // <INPUTS>
 // Снипет (HTML): inp
-// @import "input";
+@import "input";
 
 // <CHECK>
 // Снипет (HTML): chk

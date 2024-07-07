@@ -82,12 +82,6 @@ body {
       margin-top: 7.2rem;
     }
   }
-  section.application--horizontal:not(:first-child) {
-    //== 1200px ==//
-    @media (min-width: $note-m) {
-      margin-top: 13rem;
-    }
-  }
   section.safety:not(:first-child) {
     //== 992px ==//
     @media (min-width: $tb) {
@@ -98,6 +92,18 @@ body {
     //== 1200px ==//
     @media (min-width: $note-m) {
       margin-top: 12rem;
+    }
+  }
+  section.feedback:not(:first-child) {
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      margin-top: 13rem;
+    }
+  }
+  section.application--horizontal:not(:first-child) {
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      margin-top: 13rem;
     }
   }
   section.application--small-reversed:not(:first-child) {
@@ -235,3 +241,4 @@ body {
 @import "blocks/application";
 @import "blocks/safety";
 @import "blocks/team";
+@import "blocks/feedback";

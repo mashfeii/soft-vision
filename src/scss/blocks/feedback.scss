@@ -1,0 +1,64 @@
+.feedback {
+  &__header {
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      grid-column: span 5;
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      grid-column: 1;
+    }
+  }
+  &__container {
+    padding-left: 1.2rem;
+    padding-right: 1rem;
+    //== 768px ==//
+    @media (max-width: $mb) {
+      grid-template-columns: 1fr;
+      gap: 2.35rem;
+    }
+  }
+  &__title {
+    @include adaptiveValue("font-size", 70, 38);
+    letter-spacing: -0.04em;
+    &:not(:last-child) {
+      margin-bottom: em(13, 70);
+    }
+
+    //== 768px ==//
+    @media (max-width: $mb) {
+      max-width: 42rem;
+    }
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      max-width: 28.6rem;
+    }
+  }
+  &__title span {
+    color: var(--clr-white);
+    -webkit-text-stroke-width: 0.1rem;
+    -webkit-text-stroke-color: var(--clr-black);
+  }
+  &__description {
+    @include adaptiveValue("font-size", 19, 18);
+    opacity: 0.7;
+
+    //== 768px ==//
+    @media (max-width: $mb) {
+      max-width: 50rem;
+    }
+  }
+
+  &__form {
+    grid-column: 6 / span 7;
+
+    //== 992px ==//
+    @media (max-width: $tb) {
+      grid-column: 7 / span 6;
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      grid-column: 1;
+    }
+  }
+}
