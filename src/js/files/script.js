@@ -31,3 +31,12 @@ $(".clients--images .clients__slider").slick({
   appendArrows: ".clients__navigation",
 });
 
+$(".form .input").each(function(index) {
+  $(this).on("change", function(e) {
+    if ($(this).val().trim() !== "") {
+      $(this).addClass("input--inserted");
+    } else {
+      $(this).removeClass("input--inserted");
+    }
+  });
+});
