@@ -3,6 +3,12 @@
 // Подключение списка активных модулей
 // import { flsModules } from "./modules.js";
 
+document.addEventListener("DOMContentLoaded", () => {
+  if (document.querySelector("#map")) {
+    document.documentElement.classList.add("page-map");
+  }
+});
+
 $(".expectations__slider").slick({
   arrows: false,
   dots: false,
@@ -40,3 +46,33 @@ $(".form .input").each(function(index) {
     }
   });
 });
+
+if (document.querySelector("#map")) {
+  initMap();
+}
+async function initMap() {
+  await ymaps3.ready;
+
+  const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker } =
+    ymaps3;
+
+  const content = document.createElement("div");
+  const marker = new ymaps3.YMapMarker(
+    {
+      coordinates: [30.315, 59.928],
+    },
+    content,
+  );
+  content.innerHTML = `<div><img src="../img/icons/location.svg"></div>`;
+
+  const map = new YMap(document.getElementById("map"), {
+    location: {
+      center: [30.323021, 59.920773],
+      zoom: 13,
+    },
+  });
+
+  map.addChild(new YMapDefaultSchemeLayer());
+  map.addChild(new YMapDefaultFeaturesLayer());
+  map.addChild(marker);
+}
