@@ -36,6 +36,7 @@
   font-weight: 400;
   @include adaptiveValue("font-size", 22, 18);
   line-height: 140%;
+  letter-spacing: -0.02em;
 }
 .f-22-400 {
   @extend %f-22-400;

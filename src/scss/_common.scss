@@ -14,7 +14,7 @@
 .subtitle {
   font-family: var(--ff-acc);
   font-weight: 700;
-  @include adaptiveValue("font-size", 70, 48);
+  @include adaptiveValue("font-size", 70, 38);
   line-height: 90%;
   letter-spacing: -0.05em;
   text-transform: uppercase;
@@ -147,6 +147,7 @@
 }
 
 .map {
+  overflow: hidden;
   width: 100%;
   height: 53.2rem;
 

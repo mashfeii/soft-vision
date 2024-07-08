@@ -1,0 +1,25 @@
+.start {
+  &__title {
+    text-align: center;
+    @include adaptiveValue("font-size", 70, 38);
+
+    &:not(:last-child) {
+      margin-bottom: 0.7rem;
+    }
+  }
+  &__description {
+    text-align: center;
+    max-width: 82rem;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: -0.02em;
+
+    &:not(:last-child) {
+      margin-bottom: 3.8rem;
+    }
+  }
+  &__form {
+    max-width: 73rem;
+    margin: 0 auto;
+  }
+}

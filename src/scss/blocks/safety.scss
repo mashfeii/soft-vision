@@ -5,6 +5,7 @@
   }
 
   &__title {
+    @include adaptiveValue("font-size", 70, 48);
     &:not(:last-child) {
       margin-bottom: em(34.5, 70);
     }
