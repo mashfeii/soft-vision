@@ -24,6 +24,12 @@
     right: -5.5%;
     @extend %bg-con;
     background-image: url("@img/hero/back.png");
+
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      width: 100rem;
+      height: 100rem;
+    }
   }
 
   &.hero--about::before {
