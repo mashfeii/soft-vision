@@ -1,14 +1,11 @@
-// Подключение функционала "Чертогов Фрилансера"
-// import { isMobile } from "./functions.js";
-// Подключение списка активных модулей
-// import { flsModules } from "./modules.js";
-
+// Page with map has no margin to footer
 document.addEventListener("DOMContentLoaded", () => {
   if (document.querySelector("#map")) {
     document.documentElement.classList.add("page-map");
   }
 });
 
+// Sliders initialization
 $(".expectations__slider").slick({
   arrows: false,
   dots: false,
@@ -18,7 +15,6 @@ $(".expectations__slider").slick({
   centerMode: false,
   variableWidth: true,
 });
-
 $(".clients--default .clients__slider").slick({
   arrows: true,
   dots: false,
@@ -27,7 +23,6 @@ $(".clients--default .clients__slider").slick({
   slidesToShow: 1,
   appendArrows: ".clients__navigation",
 });
-
 $(".clients--images .clients__slider").slick({
   arrows: true,
   dots: false,
@@ -37,8 +32,9 @@ $(".clients--images .clients__slider").slick({
   appendArrows: ".clients__navigation",
 });
 
-$(".form .input").each(function(index) {
-  $(this).on("change", function(e) {
+// Input class for placeholder
+$(".form .input").each(function() {
+  $(this).on("change", function() {
     if ($(this).val().trim() !== "") {
       $(this).addClass("input--inserted");
     } else {
@@ -46,33 +42,20 @@ $(".form .input").each(function(index) {
     }
   });
 });
+// Image change on spoller item click
+if ($(".fields").length) {
+  const images = $(".fields__image img");
 
-if (document.querySelector("#map")) {
-  initMap();
-}
-async function initMap() {
-  await ymaps3.ready;
+  $(".fields .spollers__title").each(function() {
+    $(this).on("click", function() {
+      const item = $(this).closest(".spollers__item");
+      const index = [...item[0].parentElement.children].indexOf(item[0]);
 
-  const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker } =
-    ymaps3;
+      images.each(function() {
+        $(this).removeClass("_active");
+      });
 
-  const content = document.createElement("div");
-  const marker = new ymaps3.YMapMarker(
-    {
-      coordinates: [30.315, 59.928],
-    },
-    content,
-  );
-  content.innerHTML = `<div><img src="../img/icons/location.svg"></div>`;
-
-  const map = new YMap(document.getElementById("map"), {
-    location: {
-      center: [30.323021, 59.920773],
-      zoom: 13,
-    },
+      $(images[index]).addClass("_active");
+    });
   });
-
-  map.addChild(new YMapDefaultSchemeLayer());
-  map.addChild(new YMapDefaultFeaturesLayer());
-  map.addChild(marker);
 }
