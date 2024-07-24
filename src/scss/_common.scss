@@ -164,3 +164,35 @@
     height: 36.3rem;
   }
 }
+
+.popup {
+  margin: 2rem;
+  border-radius: 0.3rem;
+
+  //== 576px ==//
+  @media (max-width: $mb-m) {
+    padding: 4.4rem 2.5rem;
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__description {
+    max-width: 64rem;
+
+    &:not(:last-child) {
+      margin-bottom: 3.5rem;
+    }
+
+    //== 768px ==//
+    @media (max-width: $mb) {
+      max-width: 48rem;
+      &:not(:last-child) {
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+}

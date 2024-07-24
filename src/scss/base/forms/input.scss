@@ -26,6 +26,14 @@ textarea {
   letter-spacing: -0.02em;
   color: var(--clr-main);
 
+  .popup & {
+    @include adaptiveValue("font-size", 24.35, 20);
+    //== 992px ==//
+    @media (min-width: $tb) {
+      padding: 3.1rem 3.4rem 2rem;
+      height: 8rem;
+    }
+  }
   //== 992px ==//
   @media (max-width: $tb) {
     padding: 3.1rem 3.4rem 2rem;

@@ -20,6 +20,10 @@
     text-align: center;
     letter-spacing: -0.02em;
     color: rgba(13, 13, 13, 0.5);
+
+    .popup & {
+      @include adaptiveValue("font-size", 13.63, 12);
+    }
   }
   &__label {
     pointer-events: none;
@@ -31,6 +35,15 @@
     letter-spacing: -0.02em;
     color: rgba(13, 13, 13, 0.4);
     transition: transform 0.32s ease-in-out;
+
+    .popup & {
+      @include adaptiveValue("font-size", 24.35, 20);
+      //== 992px ==//
+      @media (min-width: $tb) {
+        top: 2.2rem;
+        left: 3.4rem;
+      }
+    }
 
     //== 992px ==//
     @media (max-width: $tb) {
@@ -48,6 +61,12 @@
     .input:focus + .form__label,
     .input.input--inserted + .form__label {
       transform: translate(-21.2%, -1.75rem) scale(0.57);
+      .popup & {
+        //== 992px ==//
+        @media (min-width: $tb) {
+          transform: translate(-21.2%, -1.4rem) scale(0.57);
+        }
+      }
 
       //== 992px ==//
       @media (max-width: $tb) {
@@ -95,6 +114,14 @@
         svg {
           transform: translateX(-2rem) scale(1.2);
         }
+      }
+    }
+
+    .popup & {
+      @include adaptiveValue("font-size", 24.35, 20);
+      //== 992px ==//
+      @media (min-width: $tb) {
+        padding: 2.5rem 3.5rem;
       }
     }
 
