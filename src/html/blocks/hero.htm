@@ -8,14 +8,29 @@
       Дескриптор, более подробно раскрывающий предложение дескрипто, более
       подробно раскрывающий
     </p>
-    <button type="button" class="hero__button button button--acc">
+    <a
+      data-fancybox
+      data-src="#modal"
+      href="javascript:void(0);"
+      class="hero__button button button--acc"
+    >
       Стоимость услуг
-    </button>
+    </a>
     <div class="hero__video">
       <h2 class="hero__subtitle">
         Более 4 тысяч параметров <br />
         <span>определения в алгоритмах AI</span>
       </h2>
+      <video
+        autoplay
+        muted
+        loop
+        poster="@img/hero/image.png"
+        preload="metadata"
+      >
+        <source src="@img/video.mp4" type="video/mp4" />
+        <source src="@img/video.webm" type="video/webm" />
+      </video>
     </div>
   </div>
 </section>

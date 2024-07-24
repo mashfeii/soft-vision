@@ -1,11 +1,60 @@
-<!-- 
-<div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-			</div>
-		</div>
-	</div>
+<div id="message" class="popup" style="display: none">
+  <h2 class="popup__title subtitle">Готовое решение</h2>
+  <p class="popup__description f-19">
+    Заполните форму — мы перезвоним вам в течение 10 минут и проконсультируем по
+    любым продуктам
+  </p>
+  <form action="#" class="modal__form form">
+    <label class="form__input">
+      <input type="text" name="name" id="name" class="input" />
+      <span class="form__label">Введите ваше имя *</span>
+    </label>
+    <label class="form__input">
+      <input type="text" name="phone" id="phone" class="input" />
+      <span class="form__label">Контактный телефон *</span>
+    </label>
+    <label class="form__input">
+      <input type="text" name="name" id="name" class="input" />
+      <span class="form__label">Эл. почта</span>
+    </label>
+    <label class="form__input">
+      <textarea autocomplete="off" name="message" class="input"></textarea>
+      <span class="form__label">Сообщение</span>
+    </label>
+    <button type="submit" class="form__button">
+      <span>Оставить заявку</span>
+      <span>&rarr;</span>
+    </button>
+    <span class="form__copyrights"
+      >Нажимая кнопку, вы даете согласие на обработку персональных данных.</span
+    >
+  </form>
 </div>
- -->
+<div id="modal" class="popup" style="display: none">
+  <h2 class="popup__title subtitle">Готовое решение</h2>
+  <p class="popup__description f-19">
+    Заполните форму — мы перезвоним вам в течение 10 минут и проконсультируем по
+    любым продуктам
+  </p>
+  <form action="#" class="modal__form form">
+    <label class="form__input">
+      <input type="text" name="name" id="name" class="input" />
+      <span class="form__label">Введите ваше имя *</span>
+    </label>
+    <label class="form__input">
+      <input type="text" name="phone" id="phone" class="input" />
+      <span class="form__label">Контактный телефон *</span>
+    </label>
+    <label class="form__input">
+      <input type="text" name="name" id="name" class="input" />
+      <span class="form__label">Эл. почта</span>
+    </label>
+    <button type="submit" class="form__button">
+      <span>Оставить заявку</span>
+      <span>&rarr;</span>
+    </button>
+    <span class="form__copyrights"
+      >Нажимая кнопку, вы даете согласие на обработку персональных данных.</span
+    >
+  </form>
+</div>
